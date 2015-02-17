@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Onlinestore</title>
+  <title>Albert's Bathroom Store</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= controller.controller_name %>">
+  <div id="banner">
+    <%= @page_title || "Albert's Bathroom Store" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+    </div>
+    <div id="main">
 
-<%= yield %>
+      <%= yield %>
+
+    </div>
+  </div>
 
 </body>
 </html>
