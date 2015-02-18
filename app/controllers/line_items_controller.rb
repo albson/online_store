@@ -24,10 +24,14 @@ class LineItemsController < ApplicationController
     @line_item = @cart.add_product(product.id)
     @line_item.product = product
 
-    if @line_item.save
-      redirect_to store_index_path
-    else
-      render action: "new" 
+    respond_to do |format|
+      if @line_item.save
+        format.html { redirect_to store_url }
+        format.js
+      else
+        format.html { render action: "new" }
+
+      end
     end
   end
 
