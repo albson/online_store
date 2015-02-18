@@ -13,10 +13,8 @@
   <div id="columns">
     <div id="side">
       <div id="cart">
-      <% if @cart %>
-        <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+      <% if user_signed_in? %>
           <%= render @cart %>
-        <% end %> 
       <% end %>
       </div>
     </div>
