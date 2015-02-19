@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :carts
 
-  resources :charges
+  # resources :charges
 
   get 'store/index'
 
