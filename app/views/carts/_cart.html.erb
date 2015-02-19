@@ -1,5 +1,5 @@
-
 <h2>Shopping Cart</h2>
+
 <table>
   <%= render(cart.line_items) %>
   <tr class="total_line">
@@ -10,4 +10,14 @@
 </table>
 
 
+
 <%= button_to 'Empty cart', cart, method: :delete %>
+
+<br>
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="Albert's General Store"
+          data-amount=""></script>
+<br>
+<br>
+<%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>

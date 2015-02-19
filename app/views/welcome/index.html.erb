@@ -1,5 +1,8 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
 
+<h2>Find exclusive deals at our store by becoming a member today!</h2>
+<%= image_tag "store.jpg" %>
+<br>
 
-Hello to my store!
+      <% if user_signed_in? %>
+      <%= link_to 'CLICK HERE TO ACCESS STORE', store_index_path %>
+      <% end %>

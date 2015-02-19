@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :carts
 
+  resources :charges
+
   get 'store/index'
 
   get "/products", to: "products#index"
